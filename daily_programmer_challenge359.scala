@@ -14,10 +14,8 @@ def insert_numbers(init : List[Int], final_value : List[Int]) : List[Int] = {
 		
 }
 
-
 // This stream implements the dragon curve sequence, an infinite automatic sequence of 0s and 1s. 
 def anotherStream(init : List[Int]): Stream[List[Int]] = Stream.cons(init, anotherStream(insert_numbers(init, List[Int]())))
-
 
 val infinite_dragon_curve = anotherStream(List(1))
 
